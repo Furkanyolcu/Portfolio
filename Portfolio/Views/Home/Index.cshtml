@@ -1,0 +1,530 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Web Developer</title>
+    <link rel="stylesheet" href="~/portfolio/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="animated-circle"></div>
+        <canvas id="stars"></canvas>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="animate-text delay-1">
+                        <span class="changing-text typing-text">Backend Developer</span>
+                    </h2>
+                    <p class="animate-text delay-2">.NET, C#, MSSQL, MySQL ve API teknolojileri ile güçlü ve ölçeklenebilir backend çözümleri geliştiriyorum.</p>
+                    <div class="hero-buttons animate-text delay-3">
+                        <a href="#projects" class="btn primary-btn">PROJELERİM</a>
+                        <a href="#contact" class="btn secondary-btn">İLETİŞİME GEÇ</a>
+                    </div>
+                    <div class="social-icons animate-text delay-4">
+                        <a href="https://github.com/furkanyolcu" class="social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/furkanyolcu" class="social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        @{
+                            var mediumUrl = "https://medium.com/@furkanyolcu566";
+                        }
+                        <a href="@mediumUrl" class="social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/1furkanyolcu" class="social-icon" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
+                    <div class="tech-icons animate-text delay-4">
+                        <div class="tech-icon dotnet">.NET</div>
+                        <div class="tech-icon windows"></div>
+                        <div class="tech-icon database"></div>
+                        <div class="tech-icon git"></div>
+                        <div class="tech-icon server"></div>
+                        <div class="tech-icon blue-docker"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hello-animation code-animation">
+                <img src="https://i.gifer.com/3BBS.gif" alt="Hello World Animation">
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hakkımda</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image reveal-left">
+                    <div class="image-container">
+                        <div class="placeholder-image">
+                            <i class="fas fa-user fa-4x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text reveal-right">
+                    <h3> <span class="highlight">Backend Developer </span></h3>
+                    <p>Merhaba! Ben Furkan, Malatyada'da yaşayan tutkulu bir backend geliştiricisiyim. Modern web teknolojileri üzerinde deneyim sahibiyim.</p>
+                    <p>Her projede kullanıcı odaklı, performanslı ve estetik çözümler üretmeyi hedefliyorum. Yeni teknolojileri öğrenmek ve kendimi sürekli geliştirmek benim için bir tutku.</p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Eğitim</h4>
+                                <p>Bilgisayar Mühendisliği, Bingöl Üniversitesi (2022-2026)</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Deneyim</h4>
+                                <p>5+ Yıl Web Geliştirme</p>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Konum</h4>
+                                <p>Malatya, Türkiye</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn primary-btn">CV'mi İndir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projelerim</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="web">Web Geliştirme</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Tasarım</button>
+                <button class="filter-btn" data-filter="app">Makine Öğrenmesi</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-up" data-category="web">
+                    <div class="project-image">
+                        <img src="~/portfolio/NewFolder/eticaret.png?height=400&width=600" alt="E-ticaret Projesi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Furkanyolcu/Virtual_Shopping" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/Furkanyolcu/Virtual_Shopping" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-ticaret Platformu</h3>
+                        <p>Modern bir e-ticaret platformu. Ödeme entegrasyonu, ürün yönetimi ve kullanıcı paneli içerir.</p>
+                        <div class="project-tags">
+                            <span class="tag">C# </span>
+                            <span class="tag">.Net</span>
+                            <span class="tag">SMTP</span>
+                            <span class="tag">MSSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                @*  <div class="project-card reveal-up" data-category="ui">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=400&width=600" alt="UI/UX Tasarım Projesi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Finans Uygulaması UI</h3>
+                        <p>Kişisel finans yönetimi için modern ve kullanıcı dostu bir arayüz tasarımı.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div> *@
+
+
+
+
+
+                @*     <div class="project-card reveal-up" data-category="app">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Mobil Uygulama Projesi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Fitness Takip Uygulaması</h3>
+                        <p>Egzersiz rutinlerini ve beslenme alışkanlıklarını takip etmek için mobil uygulama.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Redux</span>
+                        </div>
+                    </div>
+                </div>
+
+                *@
+
+
+
+                <div class="project-card reveal-up" data-category="web">
+                    <div class="project-image">
+                        <img src="~/portfolio/NewFolder/göretakip.png?height=400&width=600" alt="GörevlendirmeSistemi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Furkanyolcu/ProjeTakipveGorevlendirmeSistemi" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/Furkanyolcu/ProjeTakipveGorevlendirmeSistemi" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proje Takip ve Görevlendirme Sistemi</h3>
+                        <p>Yazılım ekipleri yönetmede işleri kolaylaştıran proje ve çalışan takip sistemi.</p>
+                        <div class="project-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">.Net</span>
+                            <span class="tag">MSSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                @*    <div class="project-card reveal-up" data-category="ui">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=400&width=600" alt="Dashboard Tasarımı">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Admin Dashboard</h3>
+                        <p>Veri analizi ve yönetimi için kapsamlı bir admin paneli tasarımı.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Adobe XD</span>
+                            <span class="tag">UI Design</span>
+                        </div>
+                    </div>
+                </div> *@
+
+
+
+
+                <div class="project-card reveal-up" data-category="app">
+                    <div class="project-image">
+                        <img src="~/portfolio/NewFolder/tübitak.jpg?height=400&width=600" alt="Interactive Syllabus">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/yumalieser/Interactive_syllabus" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="https://github.com/yumalieser/Interactive_syllabus" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Interactive Syllabus</h3>
+                        <p>Tübitak 2209/A için geliştirdiğimiz yapay zeka destekli interaktif ders programı uygulaması.</p>
+                        <div class="project-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">.Net</span>
+                            <span class="tag">MSSQL</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-more">
+                <a href="#" class="btn secondary-btn">Daha Fazla Proje</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Yeteneklerim</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category reveal-left">
+                    <h3>Teknik Yetenekler</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>C# .Net</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>MSSQL/MySQL</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+                        @*  <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Node.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>UI/UX Design</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="75"></div>
+                            </div>
+                        </div> *@
+                    </div>
+                </div>
+                <div class="skills-category reveal-right">
+                    <h3>Frameworks & Teknolojiler</h3>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <span>.NET</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MSSQL</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <span>Postman</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span>API</span>
+                        </div>
+                        <div class="skill-icon">
+                            <div class="skill-icon-inner">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-background">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>İletişime Geç</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info reveal-left">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>furkanyolcu566@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telefon</h3>
+                            <p>+90 543 322 28 89</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Konum</h3>
+                            <p>Malatya, Türkiye</p>
+                        </div>
+                    </div>
+                    @* <div class="contact-social">
+                        <h3>Sosyal Medya</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div> *@
+                </div>
+                <div class="contact-form reveal-right">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Adınız</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Email Adresiniz</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder=" " required>
+                            <label for="subject">Konu</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder=" " required></textarea>
+                            <label for="message">Mesajınız</label>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Portfolio</h3>
+                    <p>Modern ve kullanıcı dostu web siteleri ve uygulamalar geliştiriyorum.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#about">Hakkımda</a></li>
+                        <li><a href="#projects">Projeler</a></li>
+                        <li><a href="#skills">Yetenekler</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Bülten</h3>
+                    <p>En son projelerim ve blog yazılarım hakkında bilgi almak için abone olun.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email adresiniz" required>
+                        <button type="submit" class="btn primary-btn">Abone Ol</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Portfolio. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+        <div class="footer-shape"></div>
+    </footer>
+
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="~/portfolio/main.js"></script>
+</body>
+</html>
